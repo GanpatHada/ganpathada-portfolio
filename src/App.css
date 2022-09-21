@@ -1,306 +1,205 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@500&family=El+Messiri&family=Josefin+Sans:wght@200;400&family=Lobster&family=Pacifico&family=Roboto&family=Sofia&family=Ubuntu:wght@300&family=Varela+Round&family=Zen+Loop&display=swap');
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-
-
-/* --------------------------gloabl --------------------------------- */
-
-
-.sec-headings{
-  text-align: center;
-  margin: 20px 0px 40px 0px;
-  color: #3e3e3e;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-.sec-headings::first-letter{
-  color: var(--primarycolor);
-}
-main ~ div{
-  padding: 30px;
-  padding-bottom: 50px;
-  min-height: 200px;
-}
-main ~ div img{
-  height: 250px;
-  margin: 10px;
-}
-.primarybtn{
-  height: 50px;
-  width: 150px;
-  color: white;
-  background-color: var(--primarycolor);
-  border: none;
-  border-radius: 7px;
-  font-size: 15px;
-  margin-top: 10px;
-  font-size: 16px;
-}
-.briefnavs{
-  display: flex;
-  align-items: flex-start;
-  justify-content: start;
-  flex-direction: column;
-  padding: 30px;
-}
-.briefnavs p{
-  font-size: 1.3rem;
-  color: #686868;
-  margin: 10px 0px;
-  font-family: 'El Messiri', sans-serif;
-  letter-spacing: normal;
-}
-
-
-
-/* --------------------------gloabl --------------------------------- */
 :root{
-  --primarycolor: #ff4500; 
+  --primarycolor:orangered;
 }
-body::-webkit-scrollbar{
-  display: none;
-}
+
 nav{
   display: flex;
-  width: 100vw;
-  justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding-left: 10px;
-  padding-right: 5px;
-  box-shadow: rgba(43, 43, 43, 0.199) 0px 5px 15px;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  z-index: 500;
+  justify-content: space-between;
   background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  height: 50px;
+  padding: 5px;
+  padding-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ 
+  
 }
-ul{
-  display: flex;
-  position: relative;
 
-}
-hr{
-  height: 50px;
-  width: 100px;
-  position: absolute;
-  margin-left: 20px;
-  transition: 0.5s;
-  border: 2px solid white;
-}
-li{
-  
-  height: 50px;
+ul{
   margin: 0px;
-  border-radius: 5px;
-  margin: 0px 10px;
-  padding: 0px 10px;
-  
+  margin-right: 20px;
+}
+nav *{
+  display: flex;
 }
 nav h1{
-  color: #535353;
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+#navs{
+  display: block;
+  margin-right: 20px;
 }
 nav a{
-  display: block;
+  display: flex;
+  align-items: center;
+}
+#navs a{
   text-decoration: none;
-  color: #2c2c2c;
+  color: rgb(0, 0, 0);
+  transition: 0.3s ease-out;
+  display: flex;
+  height: 50px;
+  min-width: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px; 
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600px;
+  
+  
+}
+
+nav #menu{
+  display: none;
+}
+nav i{
+  font-size: 1.5rem;
+}
+nav div{
   height: 100%;
-  width: 100%;
+}
+#navs a:hover{
+  color: var(--primarycolor);
+}
+
+
+
+main {
+  margin-top: 60px;
+  background-color: white;
+}
+.prevsblock{
+  display: flex;
+  padding: 20px;
+}
+.imagesection,.introsection{
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.2s ease-out background;
-  font-weight:normal;
-  
-  
 }
-/* #home:hover ~ #hoverbox{
-  left: 95px;
-} */
-li:hover{
-  background-color: rgb(255, 255, 255);
-  color: var(--primarycolor);
-  font-weight: bold;
-}
-li a{
-  font-family: 'Comfortaa', cursive;
-}
-
-
-
-
-/*----------------------------------------------------------- main css here ---------------- */
-
-
-main{
-  width: 100vw;
-  height: 700px;
-  display: flex;
-  padding: 20px;
-  z-index: 0;
-}
-#introsection{
-  width: 50%;
+.prevsblock img{
   height: 100%;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+}
+.introsection{
+  padding:30px;
   flex-direction: column;
-  z-index: 0;
-  flex-shrink: 1;
+  align-items: start;
+}
+.imagesection{
+  padding: 30px;
 }
 main h1{
-  font-size: 4rem;
-  color: #202020;
+  font-size: 5rem;
+  margin: 0px;
+  color: #232424;
+  
 }
 main h1::first-letter{
   color: var(--primarycolor);
-
 }
 main h2{
   font-size: 2.5rem;
-  font-weight: normal;
-  margin: 10px 0px;
-  color: #424242;
-  line-height: 50px;
-  overflow: hidden;
- 
+  margin: 0px;
+  line-height: 3rem;
+  color: #3d3d3d;
+  font-weight: 600;
 }
-
 main h2::first-letter{
   color: var(--primarycolor);
 }
-main p{
-  font-size: 1.5rem;
-  color: #686868;
-  margin: 10px 0px;
-  font-family: 'El Messiri', sans-serif;
+.prevsblock p{
+  font-size: 1.3rem;
+  color: #6d6d6d;
+  font-family: 'Ubuntu', sans-serif;
 }
-#imagesection{
-  height: 100%;
-  width: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
-  flex-shrink: 2;
-  padding: 20px;
+.primarybtn{
+  background-color:var(--primarycolor);
+  color: rgb(255, 255, 255);
+  height: 50px;
+  width: 150px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  
 }
-#imagesection img{
-  height: 80%;
-  width: 100%;
-  object-fit: contain;
+main .primarybtn{
+  background: linear-gradient(to right,rgb(255, 51, 0),rgb(248, 115, 63));
 }
-
-
-/* -------------------------------about section here---------------------------------------- */
-
-
-#about{
+#projectprev{
+  background-color: whitesmoke;
+  height: 300px;
+}
+#projectprev .primarybtn{
+  background-color: orangered;
+}
+.headings{
+  text-align: center;
   background-color: whitesmoke;
 }
-
-#about h2::first-letter{
-  color: var(--primarycolor);
+#blogsprev{
+  background-color: white;
+  height: 300px;
 }
-#about p::first-letter{
-  color: var(--primarycolor);
-  font-weight: bold;
-}
-#about p{
-  font-size: 1.3rem;
-  color: #686868;
-  font-family: 'El Messiri', sans-serif;
-}
-#about a{
-  color: var(--primarycolor);
-  text-decoration: none;
-}
-
-/* -------------------------------skills section here---------------------------------------- */
-
-#skills{
+#contactprev{
+  height: 300px;
   background-color: white;
 }
-#skills img{
-  height: 60px;
-  width: 60px;
-  margin: 20px;
-}
-#skills div{
-  text-align: center;
-}
-
-
-/* ----------------------------projects----------------------------------------------------------------- */
-
-#projects{
-  background-color: whitesmoke;
-}
-#projects  div{
-  display: flex;
-  justify-content: center;
-
-}
-
-
-
-
-/* -------------------------------blogs--------------------------------------- */
-
-
-#blogs div{
-  display: flex;
-  justify-content: center;
-
-}
-
-
-/* --------------------------contact---------------------------------------
- */
-
- #contact{
-   background-color: whitesmoke;
- }
-
-
-#contact div{
-  display: flex;
-  justify-content: center;
-
-}
-
-
-
-/* ----------------------------------footer------------------------ */
 footer{
-  min-height: 100px;
   background-color: var(--primarycolor);
-  padding: 20px;
-  padding-bottom: 0px;
+}footer p{
+  margin: 0px;
+  padding: 10px 0px ;
+  color: whitesmoke;
+ 
 }
 footer h3{
+  margin: 0px;
   text-align: center;
-  margin: 10px 0px;
-  color: white;
-  font-size: 1.5rem;
+  padding: 20px 0px;
+  color: whitesmoke;
+  font-family: 'Zen Loop', cursive;
+  font-size: 2rem;
+  border-bottom: 1px solid rgba(231, 231, 231, 0.329);
 }
 footer div{
   text-align: center;
+  padding: 10px 0px;
+  
 }
 footer i{
   font-size: 1.5rem;
-  margin: 10px;
+  margin: 0px 10px;
   color: white;
 }
-footer p{
-  border-top: 1px solid rgba(224, 224, 224, 0.274);
-  color: whitesmoke;
-  padding: 20px;
+#skillsprev{
+  height: 300px;
+  /* background: linear-gradient(to right,orangered,rgba(255, 68, 0, 0.856),orangered); */
+ background-color: whitesmoke;
+}
+#skillsprev h2{
+  margin:0px;
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+
+}
+#skillsprev img{
+  height: 60px;
+  width: 60px;
+  margin: 0px 20px;
+  
+}
+#skillsprev div{
+  text-align: center;
+  padding-top: 20px;
+
 }
