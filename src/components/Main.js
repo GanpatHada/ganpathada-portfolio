@@ -11,7 +11,7 @@ import blogs from './web logos/blogs.svg'
 import contact from './web logos/contact.svg'
 const Main = () => {
     return (
-            <main className='prevsblock'>
+            <main className='prevsblock' id='mainblock'>
                 <div className="introsection">
                     <h1>Hi there!</h1>
                     <h2>I'am Ganpat Hada a full stack web developer</h2>

@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
-import { a } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import mainlogo from './web logos/mainlogo.png'
 const Navbar = () => {
-  const [transform, settransform] = useState("-200px")
+  const [transform, settransform] = useState("-250px")
   const [display, setdisplay] = useState("none")
+  const closeSidebar=()=>{
+    setdisplay("none");
+    settransform("-250px");
+  }
+  const sidenavs=document.querySelectorAll(".sidenavs");
+  sidenavs.forEach(e=>{
+    e.addEventListener("click",closeSidebar)
+  })
   return (
     <nav>
         <div id="title">
@@ -11,30 +19,28 @@ const Navbar = () => {
         </div>
         <div id="navs">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Skills</a></li>
-                <li><a href="/">Blogs</a></li>
-                <li><a href="/">Projects</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/">Skills</NavLink></li>
+                <li><NavLink to="/">Blogs</NavLink></li>
+                <li><NavLink to="/projects">Projects</NavLink></li>
+                <li><NavLink to="/">Contact</NavLink></li>
                 
             </ul>
         </div>
         <aside style={{transform:`translateX(${transform})`}}>
-        <i class="fa-solid fa-xmark" id='cross' onClick={()=>{
-          setdisplay("none");
-          settransform("-200px");}}></i> 
+        <i className="fa-solid fa-xmark" id='cross' onClick={closeSidebar}></i> 
 
         <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Skills</a></li>
-                <li><a href="/">Blogs</a></li>
-                <li><a href="/">Projects</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><NavLink className="sidenavs" to="/">Home</NavLink></li>
+                <li><NavLink className="sidenavs" to="/">Skills</NavLink></li>
+                <li><NavLink className="sidenavs" to="/">Blogs</NavLink></li>
+                <li><NavLink className="sidenavs" to="/projects">Projects</NavLink></li>
+                <li><NavLink className="sidenavs" to="/">Contact</NavLink></li>
                 
         </ul>
         </aside> 
         <div id="menu">
-        <i class="fa-solid fa-bars" onClick={()=>{
+        <i className="fa-solid fa-bars" onClick={()=>{
           setdisplay("block");
           settransform("0px");}}></i>
         </div>

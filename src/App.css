@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@500&family=El+Messiri&family=Josefin+Sans:wght@200;400&family=Lobster&family=Pacifico&family=Roboto&family=Sofia&family=Ubuntu:wght@300&family=Varela+Round&family=Zen+Loop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@500&family=El+Messiri&family=Josefin+Sans:wght@200;400&family=Lobster&family=Pacifico&family=Poppins:wght@300&family=Roboto&family=Sofia&family=Ubuntu:wght@300&family=Varela+Round&family=Zen+Loop&display=swap');
 :root{
   --primarycolor:orangered;
 }
 *{
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
 
 }
 body::-webkit-scrollbar{
@@ -24,7 +27,7 @@ nav{
   box-sizing: content-box;
 }
 #cross{
-  margin-left: 170px;
+  margin-left: 220px;
   margin-top: 10px;
   color: white;
 }
@@ -43,7 +46,7 @@ aside{
   left: 0px;
   z-index: 4;
   height: 100vh;
-  width: 200px;
+  width: 250px;
   background-color:var(--primarycolor);
   transition: 0.3s ease-out;
   flex-direction: column;
@@ -91,7 +94,7 @@ nav a{
   align-items: center;
   justify-content: center;
   padding: 0px 20px; 
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600px;
   
   
@@ -122,6 +125,7 @@ main {
   margin-top: 60px;
   background-color: white;
 }
+
 .prevsblock{
   display: flex;
   padding: 20px;
@@ -133,10 +137,13 @@ main {
   justify-content: center;
 }
 .prevsblock img{
+  height: 250px;
+  width: 250px;
+}
+#mainblock img{
   height: 100%;
   width: 100%;
 }
-
 .introsection{
   padding:30px;
   flex-direction: column;
@@ -150,6 +157,7 @@ main h1{
   margin: 0px;
   color: #232424;
   margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
   
 }
 main h1::first-letter{
@@ -158,9 +166,10 @@ main h1::first-letter{
 main h2{
   font-size: 2.5rem;
   margin: 0px;
-  line-height: 3rem;
+  line-height: 2.5rem;
   color: #3d3d3dc4;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
 }
 main h2::first-letter{
   color: var(--primarycolor);
@@ -168,7 +177,7 @@ main h2::first-letter{
 .prevsblock p{
   font-size: 1.3rem;
   color: #6d6d6d;
-  font-family: 'Ubuntu', sans-serif;
+  margin: 20px 0px;
 }
 .primarybtn{
   background-color:var(--primarycolor);
@@ -178,14 +187,24 @@ main h2::first-letter{
   text-transform: uppercase;
   border: none;
   border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
   
 }
-main .primarybtn{
-  background: linear-gradient(to right,rgb(255, 51, 0),rgb(248, 115, 63));
+.secondarybtn{
+  background-color:transparent;
+  border: 1.5px solid var(--primarycolor);
+  color: var(--primarycolor);
+  height: 50px;
+  width: 150px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: bold;
+  
 }
+
 #projectprev{
   background-color: whitesmoke;
-  height: 300px;
+  min-height: 300px;
 }
 #projectprev .primarybtn{
   background-color: orangered;
@@ -197,10 +216,10 @@ main .primarybtn{
 }
 #blogsprev{
   background-color: white;
-  height: 300px;
+  min-height: 300px;
 }
 #contactprev{
-  height: 300px;
+  min-height: 300px;
   background-color: white;
 }
 
@@ -232,11 +251,10 @@ footer i{
   color: white;
 }
 #skillsprev{
-  height: 300px;
-  background: linear-gradient(to right,orangered,rgba(255, 68, 0, 0.856),orangered);
-  width: 98vw;
-  margin: auto;
- border-radius: 6px;
+ min-height: 300px;
+ background: linear-gradient(to right,orangered,rgba(255, 68, 0, 0.856),orangered);
+ padding: 20px;
+ padding-top: 0px;
  
 }
 #skillsprev h2{
@@ -250,15 +268,68 @@ footer i{
 }
 
 #skillsprev img{
-  height: 60px;
-  width: 60px;
-  margin: 0px 20px;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
   
 }
 #skillsprev div{
   text-align: center;
-  padding-top: 20px;
+  max-width: 500px;
+  margin: auto;
 
+}
+#projects{
+  margin-top: 60px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  
+}
+#projects h1{
+  color: #232424;
+  text-align: center;
+  margin: 10px 0px;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+}
+#projects h1::first-letter{
+  color: var(--primarycolor);
+}
+#cards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  
+}
+#cards h2{
+  margin: 10px 0px;
+  color: #232424;
+  font-size: 1.8rem;
+
+}
+#cards h4{
+  margin: 10px 0px;
+  color: #3d3d3dc4;
+  font-size: 1.3rem;
+}
+#cards p{
+  margin: 10px 0px;
+  margin-bottom: 20px;
+  color: #6d6d6d;
+}
+#cards > div{
+  
+  width: 400px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-bottom: 40px;
 }
 @media (min-width: 748px) and (max-width: 1000px){
   main h1{
@@ -271,13 +342,14 @@ footer i{
   .prevsblock p{
     font-size: 1rem;
   }
-  #projectprev,#blogsprev,#contactprev,#skillsprev{
-    height: 250px;
+  #projectprev,#blogsprev,#contactprev{
+    min-height: 250px;
   }
   #skillsprev img{
     height: 40px;
     width: 40px;
   }
+ 
   .primarybtn{
     height: 40px;
   }
@@ -299,6 +371,10 @@ footer i{
   .introsection{
     width: 100%;
     
+  }
+  #skillsprev img{
+    height: 38px;
+    width: 38px;
   }
   main h1{
     font-size: 3.5rem;
@@ -337,14 +413,18 @@ footer i{
   }
   #skillsprev div{
     padding-top: 0px;
+    
   }
   
   #projectprev,#blogsprev{
-    height: 225px;
+    min-height: 100px;
   }
   #skillsprev{
     width: 95vw;
-    height: 225px;
+   min-height: 200px;   
+  }
+  #contactprev{
+    min-height: 200px;
   }
 }
 
