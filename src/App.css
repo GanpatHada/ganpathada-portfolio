@@ -149,6 +149,7 @@ main h1{
   font-size: 5rem;
   margin: 0px;
   color: #232424;
+  margin-bottom: 10px;
   
 }
 main h1::first-letter{
