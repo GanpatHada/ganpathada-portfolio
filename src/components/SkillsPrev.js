@@ -3,8 +3,9 @@ import react from './web logos/react.webp'
 import html from './web logos/html.png'
 import css from './web logos/css.png'
 import js from './web logos/js.png'
-import java from './web logos/java.webp'
-import figma from './web logos/figma.png'
+import figma from './web logos/fig1.png'
+import bootstrap from './web logos/bootstrap.png'
+import node1 from './web logos/node1.png'
 
 const SkillsPrev = () => {
     return (
@@ -14,9 +15,12 @@ const SkillsPrev = () => {
                 <img src={html} alt="" />
                 <img src={css} alt="" />
                 <img src={js} alt="" />
-                <img src={java} alt="" />
-                <img src={figma} alt="" />
+                <img style={{backgroundColor:"black",borderRadius:"3px"}} src={figma} alt="" />
+                <img src={bootstrap} alt="" />
+                <img src={node1} alt="" />
+                
             </div>
+            
 
         </div>
     )

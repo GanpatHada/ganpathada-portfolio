@@ -2,7 +2,13 @@
 :root{
   --primarycolor:orangered;
 }
+*{
+  box-sizing: border-box;
 
+}
+body::-webkit-scrollbar{
+  display: none;
+}
 nav{
   display: flex;
   align-items: center;
@@ -14,8 +20,45 @@ nav{
   height: 50px;
   padding: 5px;
   padding-left: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
- 
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+  box-sizing: content-box;
+}
+#cross{
+  margin-left: 170px;
+  margin-top: 10px;
+  color: white;
+}
+#wrapper{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.747);
+  z-index: 2;
+}
+aside{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 4;
+  height: 100vh;
+  width: 200px;
+  background-color:var(--primarycolor);
+  transition: 0.3s ease-out;
+  flex-direction: column;
+}
+aside ul{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+aside ul li{
+  height: 50px;
+  width: 200px;
+  padding-left: 20px;
   
 }
 
@@ -53,9 +96,15 @@ nav a{
   
   
 }
-
-nav #menu{
+aside a{
+  color: white;
+  text-decoration: none;
+}
+#menu{
+  margin-right: 40px;
   display: none;
+  position: relative;
+  top: 10px;
 }
 nav i{
   font-size: 1.5rem;
@@ -87,6 +136,7 @@ main {
   height: 100%;
   width: 100%;
 }
+
 .introsection{
   padding:30px;
   flex-direction: column;
@@ -138,6 +188,7 @@ main .primarybtn{
 }
 #projectprev .primarybtn{
   background-color: orangered;
+  
 }
 .headings{
   text-align: center;
@@ -151,6 +202,7 @@ main .primarybtn{
   height: 300px;
   background-color: white;
 }
+
 footer{
   background-color: var(--primarycolor);
 }footer p{
@@ -180,8 +232,11 @@ footer i{
 }
 #skillsprev{
   height: 300px;
-  /* background: linear-gradient(to right,orangered,rgba(255, 68, 0, 0.856),orangered); */
- background-color: whitesmoke;
+  background: linear-gradient(to right,orangered,rgba(255, 68, 0, 0.856),orangered);
+  width: 98vw;
+  margin: auto;
+ border-radius: 6px;
+ 
 }
 #skillsprev h2{
   margin:0px;
@@ -192,6 +247,7 @@ footer i{
   font-weight: lighter;
 
 }
+
 #skillsprev img{
   height: 60px;
   width: 60px;
@@ -203,3 +259,91 @@ footer i{
   padding-top: 20px;
 
 }
+@media (min-width: 748px) and (max-width: 1000px){
+  main h1{
+    font-size: 4rem;
+  }
+  main h2{
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .prevsblock p{
+    font-size: 1rem;
+  }
+  #projectprev,#blogsprev,#contactprev,#skillsprev{
+    height: 250px;
+  }
+  #skillsprev img{
+    height: 40px;
+    width: 40px;
+  }
+  .primarybtn{
+    height: 40px;
+  }
+
+}
+@media (max-width: 747px){
+  #navs{
+    display: none;
+  }
+  #menu{
+    display: block;
+  }
+  .prevsblock{
+    flex-direction: column;
+  }
+  .imagesection{
+    display: none;
+  }
+  .introsection{
+    width: 100%;
+    
+  }
+  main h1{
+    font-size: 3.5rem;
+  }
+  main .imagesection{
+    display: flex;
+    order: 1;
+    width: 100%;
+  }
+  main .introsection{
+    order: 2;
+  }
+
+}
+@media (max-width: 576px){
+  main h1{
+    font-size: 2.8rem;
+  }
+  main h2{
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+  .prevsblock p{
+    font-size: 1rem;
+  }
+  .introsection{
+    padding: 10px;
+  }
+  .primarybtn{
+    height: 35px;
+  }
+  #skillsprev img{
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+  }
+  #skillsprev div{
+    padding-top: 0px;
+  }
+  
+  #projectprev,#blogsprev{
+    height: 225px;
+  }
+  #skillsprev{
+    width: 95vw;
+    height: 225px;
+  }
+}
+
