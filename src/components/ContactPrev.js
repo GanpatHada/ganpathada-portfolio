@@ -14,7 +14,7 @@ const ContactPrev = () => {
                 </p>
                 <div className='btngroup'>
                 <button className='primarybtn'>Linked <i className="fa-brands fa-linkedin"></i></button>&nbsp;
-                <button className='tertiarybtn'><img src={gmail} alt="" /> &nbsp;Gmail</button>
+                <a href="mailto:hadaganpat42@gmail.com" target='_blank'><button className='tertiarybtn'><img src={gmail} alt="" /> &nbsp;Gmail</button></a>
                 </div>
             </div>
         </div>
