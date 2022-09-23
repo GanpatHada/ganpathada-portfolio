@@ -497,6 +497,9 @@ footer i{
   .btngroup{
     flex-wrap: wrap;
   }
+  #projects{
+    padding: 10px;
+  }
   
 }
 
