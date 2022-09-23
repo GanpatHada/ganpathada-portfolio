@@ -247,7 +247,7 @@ main h2::first-letter{
   height: 45px;
   width: 130px;
   border-radius: 7px; 
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   align-items: baseline;
   padding-top: 10px;
@@ -432,9 +432,6 @@ footer i{
     width: 40px;
   }
  
-  .primarybtn,.tertiarybtn{
-    height: 40px;
-  }
 
 }
 @media (max-width: 747px){
@@ -489,14 +486,7 @@ footer i{
   .introsection{
     padding: 10px;
   }
-  .primarybtn,.secondarybtn,.tertiarybtn{
-    height: 40px;
-    margin-bottom: 10px;
-  }
-  .tertiarybtn{
-    padding-top: 7px;
-    font-size: 1rem;
-  }
+  
   #skillsprev img{
     height: 40px;
     width: 40px;
