@@ -38,6 +38,7 @@ const Navbar = () => {
                 <li><NavLink className="sidenavs" to="/">Contact</NavLink></li>
                 
         </ul>
+        
         </aside> 
         <div id="menu">
         <i className="fa-solid fa-bars" onClick={()=>{

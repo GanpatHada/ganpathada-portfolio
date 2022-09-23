@@ -1,5 +1,5 @@
 import React from 'react'
-import image from './devimage.svg'
+import image from './web logos/devimage.svg'
 import html from './web logos/html.png'
 import css from './web logos/css.png'
 import js from './web logos/js.png'

@@ -18,7 +18,7 @@ const SkillsPrev = () => {
                 <img src={html} alt="" />
                 <img src={css} alt="" />
                 <img src={js} alt="" />
-                <img style={{backgroundColor:"black",borderRadius:"3px"}} src={figma} alt="" />
+                <img src={figma} alt="" />
                 <img src={bootstrap} alt="" />
                 <img src={node1} alt="" />
                 <img  src={ts} alt="" />

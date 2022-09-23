@@ -7,8 +7,13 @@
   margin: 0px;
   padding: 0px;
   font-family: 'Poppins', sans-serif;
+  
 
 }
+.prevsblock{
+  background-color: white;
+}
+
 body::-webkit-scrollbar{
   display: none;
 }
@@ -28,7 +33,7 @@ nav{
 }
 #cross{
   margin-left: 220px;
-  margin-top: 10px;
+  margin-top: 20px;
   color: white;
 }
 #wrapper{
@@ -50,18 +55,23 @@ aside{
   background-color:var(--primarycolor);
   transition: 0.3s ease-out;
   flex-direction: column;
+  
 }
 aside ul{
-  margin-top: 40px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   margin-left: 0px;
   padding-left: 0px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.397);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.397);
+  padding:40px 0px;
 }
 aside ul li{
   height: 50px;
   width: 200px;
-  padding-left: 20px;
+  padding-left: 40px;
   
 }
 
@@ -169,60 +179,106 @@ main h2{
   line-height: 2.5rem;
   color: #3d3d3dc4;
   font-weight: 500;
+  
+}
+#mainblock h2{
   font-family: Arial, Helvetica, sans-serif;
+  color: #3d3d3d;
+  font-weight: normal;
 }
 main h2::first-letter{
   color: var(--primarycolor);
 }
 .prevsblock p{
-  font-size: 1.3rem;
-  color: #6d6d6d;
+  font-size: 1.2rem;
+  color: #494949;
   margin: 20px 0px;
+}
+.prevsblock h2{
+  font-size: 2rem;
+  color: rgb(37, 37, 37);
+  font-family: 'Ubuntu';
+  font-weight: bolder;
+
+}
+.prevsblock h2 span{
+  color: var(--primarycolor);
+}
+.prevsblock i{
+  font-size: 1.7rem;
 }
 .primarybtn{
   background-color:var(--primarycolor);
-  color: rgb(255, 255, 255);
-  height: 50px;
-  width: 150px;
-  text-transform: uppercase;
+  color: rgb(241, 241, 241);
+  height: 45px;
+  width: 130px;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  
+  font-family: Arial, Helvetica, sans-serif;  
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  text-transform: capitalize;
+}
+.primarybtn:hover{
+  background-color: rgb(255, 51, 0);
 }
 .secondarybtn{
-  background-color:transparent;
-  border: 1.5px solid var(--primarycolor);
+  background-color:rgba(255, 68, 0, 0.185);
+  border: 1px solid var(--primarycolor);
+  border: none;
   color: var(--primarycolor);
-  height: 50px;
-  width: 150px;
-  text-transform: uppercase;
-  border-radius: 5px;
+  height: 45px;
+  width: 130px;
+  border-radius: 5px; 
   font-weight: bold;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.tertiarybtn{
+  background-color:rgb(226, 226, 226);
+  border: none;
+  color: #3d3d3d;
+  height: 45px;
+  width: 130px;
+  border-radius: 7px; 
+  font-size: 1.2rem;
+  display: flex;
+  align-items: baseline;
+  padding-top: 10px;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+.btngroup img{
+  height: 1.3rem;
+  width: 1.4rem;
+}
+.btngroup{
+  display: flex;
+  align-items: center;
+}
+#projectprev{
+  background-color:rgba(233, 233, 233, 0.938);
+  min-height: 300px;
   
 }
 
-#projectprev{
-  background-color: whitesmoke;
-  min-height: 300px;
-}
-#projectprev .primarybtn{
-  background-color: orangered;
-  
-}
 .headings{
   text-align: center;
   background-color: whitesmoke;
 }
 #blogsprev{
-  background-color: white;
   min-height: 300px;
 }
 #contactprev{
   min-height: 300px;
-  background-color: white;
+  
 }
-
+#contactprev .primarybtn{
+  font-size: 1.2rem;
+}
 footer{
   background-color: var(--primarycolor);
 }footer p{
@@ -252,7 +308,8 @@ footer i{
 }
 #skillsprev{
  min-height: 300px;
- background: linear-gradient(to right,orangered,rgba(255, 68, 0, 0.856),orangered);
+ /* background: linear-gradient(to right,orangered,rgba(255, 68, 0, 0.856),orangered); */
+ background-color:rgb(233, 233, 233);
  padding: 20px;
  padding-top: 0px;
  
@@ -264,18 +321,19 @@ footer i{
   font-size: 2rem;
   color: rgb(0, 0, 0);
   font-weight: lighter;
+  padding-bottom: 30px;
 
 }
 
 #skillsprev img{
   height: 50px;
   width: 50px;
-  margin: 10px;
+  margin:10px;
   
 }
 #skillsprev div{
   text-align: center;
-  max-width: 500px;
+  max-width: 450px;
   margin: auto;
 
 }
@@ -342,6 +400,7 @@ footer i{
   .prevsblock p{
     font-size: 1rem;
   }
+  
   #projectprev,#blogsprev,#contactprev{
     min-height: 250px;
   }
@@ -356,6 +415,7 @@ footer i{
 
 }
 @media (max-width: 747px){
+  
   #navs{
     display: none;
   }
@@ -371,6 +431,9 @@ footer i{
   .introsection{
     width: 100%;
     
+  }
+  .prevsblock h2{
+    font-size: 1.7rem;
   }
   #skillsprev img{
     height: 38px;
@@ -403,8 +466,13 @@ footer i{
   .introsection{
     padding: 10px;
   }
-  .primarybtn{
+  .primarybtn,.secondarybtn,.tertiarybtn{
     height: 40px;
+    margin-bottom: 10px;
+  }
+  .tertiarybtn{
+    padding-top: 7px;
+    font-size: 1rem;
   }
   #skillsprev img{
     height: 40px;
@@ -420,11 +488,15 @@ footer i{
     min-height: 100px;
   }
   #skillsprev{
-    width: 95vw;
+   
    min-height: 200px;   
   }
   #contactprev{
     min-height: 200px;
   }
+  .btngroup{
+    flex-wrap: wrap;
+  }
+  
 }
 

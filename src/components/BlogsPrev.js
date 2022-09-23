@@ -4,6 +4,7 @@ const BlogsPrev = () => {
   return (
     <div className='prevsblock' id='blogsprev'>
             <div className="introsection">
+                <h2>Blogs</h2>
                 <p>Here I have listed some of my technical blogs which I have written
                 </p>
                 <button id='download_cv' className='primarybtn'>see Blogs</button>

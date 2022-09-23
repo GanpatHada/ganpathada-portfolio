@@ -8,6 +8,7 @@ const ProjectsPrev = () => {
                 <img src={projects} alt="" />
             </div>
             <div className="introsection">
+                <h2>Projects</h2>
                 <p>Here I have listed some of my Technical blogs which I have hosted online along with their source code.
                 </p>
                 <button id='download_cv' className='primarybtn'>see projects</button>
