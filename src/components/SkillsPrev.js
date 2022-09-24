@@ -10,6 +10,7 @@ import ts from './web logos/Ts.png'
 import fire from './web logos/firebase.png'
 import mdb from './web logos/mdb.webp'
 import exp from './web logos/express.png'
+import github from './web logos/github.png'
 const SkillsPrev = () => {
     return (
         <div id="skillsprev">
@@ -25,6 +26,7 @@ const SkillsPrev = () => {
                 <img  src={fire} alt="" />
                 <img  src={mdb} alt="" />
                 <img  src={exp} alt="" />
+                <img  src={github} alt="" />
                 
             </div>
             
