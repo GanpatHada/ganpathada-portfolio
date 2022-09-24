@@ -8,6 +8,8 @@ const Footer = () => {
         <a href="https://www.linkedin.com/in/ganpat-hada-33abb4227" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
         <a href="https://github.com/GanpatHada" target="_blank"><i className="fa-brands fa-github"></i></a>
         <a href="https://twitter.com/ganpat_hada" target="_blank"><i className="fa-brands fa-twitter"></i></a>
+        <a href="mailto:hadaganpat42@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <div>
             <p>© 2022, Built with ❤ by Ganpat Hada</p>
