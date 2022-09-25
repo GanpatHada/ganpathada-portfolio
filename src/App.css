@@ -428,9 +428,10 @@ footer i{
   
 }
 #about div {
-  padding: 20px;
+  padding: 15px;
   color: #3d3d3d;
   font-size: 1.1rem;
+  text-align: justify;
 }
 @media (min-width: 748px) and (max-width: 1000px){
   main h1{
