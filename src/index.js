@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
+import About from './components/About';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
@@ -15,6 +16,7 @@ root.render(
       <Navbar />
       <Routes>
       <Route exact path="/projects" element={<Projects />} />
+      <Route exact path="/about" element={<About />} />
       <Route exact path="/" element={<App />} />
     </Routes>
       <Footer />

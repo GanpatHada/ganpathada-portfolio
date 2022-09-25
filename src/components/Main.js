@@ -9,6 +9,7 @@ import java from './web logos/java.webp'
 import project from './web logos/projects.svg'
 import blogs from './web logos/blogs.svg'
 import contact from './web logos/contact.svg'
+import { Link } from 'react-router-dom'
 const Main = () => {
     return (
             <main className='prevsblock' id='mainblock'>
@@ -19,7 +20,7 @@ const Main = () => {
                         . I am a full stack web developer
 
                     </p>
-                    <button id='download_cv' className='primarybtn'>Download CV</button>
+                    <Link to="/about"><button className='primarybtn'>Know more</button></Link>
                 </div>
                 <div className='imagesection'>
                     <img src={image} alt="" />

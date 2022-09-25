@@ -3,7 +3,7 @@ import ProjectsList from './ProjectsList'
 import Projectsdetails from './ProjectsDetails'
 const Projects = () => {
   return (
-    <div id='projects'>
+    <div id='projects' className='mainblocks'>
       <h1>Projects</h1>
       <div id="cards">
         {
