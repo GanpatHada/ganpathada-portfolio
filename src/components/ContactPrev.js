@@ -1,9 +1,9 @@
 import React from 'react'
 import contact from './web logos/contact.svg'
 import gmail from './web logos/gmail.png'
-const ContactPrev = () => {
+const ContactPrev = ({scroll}) => {
     return (
-        <div className='prevsblock' id='contactprev'>
+        <div className='prevsblock' id='contactprev' ref={scroll}>
             <div className='imagesection'>
                 <img src={contact} alt="" />
             </div>
@@ -13,8 +13,8 @@ const ContactPrev = () => {
                     Feel free to drop a message
                 </p>
                 <div className='btngroup'>
-                <a href="https://www.linkedin.com/in/ganpat-hada-33abb4227" target='_blank'><button className='primarybtn'>Linked <i className="fa-brands fa-linkedin"></i></button>&nbsp;</a>
-                <a href="mailto:hadaganpat42@gmail.com" target='_blank'><button className='tertiarybtn'><img src={gmail} alt="" /> &nbsp;Gmail</button></a>
+                    <a href="https://www.linkedin.com/in/ganpat-hada-33abb4227" target='_blank'><button className='primarybtn'>Linked <i className="fa-brands fa-linkedin"></i></button>&nbsp;</a>
+
                 </div>
             </div>
         </div>

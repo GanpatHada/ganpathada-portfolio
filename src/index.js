@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
 import About from './components/About';
+import Blogs from './components/Blogs';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
@@ -17,6 +18,8 @@ root.render(
       <Routes>
       <Route exact path="/projects" element={<Projects />} />
       <Route exact path="/about" element={<About />} />
+      <Route exact path="/contact" element={<App />} />
+      <Route exact path="/blogs" element={<Blogs />} />
       <Route exact path="/" element={<App />} />
     </Routes>
       <Footer />

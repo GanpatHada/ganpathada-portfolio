@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink, } from 'react-router-dom'
 import mainlogo from './web logos/mainlogo.png'
 const Navbar = () => {
+  
+  
   const [transform, settransform] = useState("-250px")
   const [display, setdisplay] = useState("none")
   const closeSidebar=()=>{
@@ -12,6 +14,14 @@ const Navbar = () => {
   sidenavs.forEach(e=>{
     e.addEventListener("click",closeSidebar)
   })
+  
+  const checkActive = (match, location) => {
+    if (!location) return false;
+    const { pathname } = location;
+    const { url } = match;
+    return pathname === url ? true : false;
+  };
+
   return (
     <nav>
         <div id="title">
@@ -21,9 +31,9 @@ const Navbar = () => {
             <ul>
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/">Blogs</NavLink></li>
+                <li><NavLink to="/blogs">Blogs</NavLink></li>
                 <li><NavLink to="/projects">Projects</NavLink></li>
-                <li><NavLink to="/">Contact</NavLink></li>
+                <li><NavLink to="/contact">Contact</NavLink></li>
                 
             </ul>
         </div>
@@ -33,9 +43,9 @@ const Navbar = () => {
         <ul>
                 <li><NavLink className="sidenavs" to="/">Home</NavLink></li>
                 <li><NavLink className="sidenavs" to="/about">About</NavLink></li>
-                <li><NavLink className="sidenavs" to="/">Blogs</NavLink></li>
+                <li><NavLink className="sidenavs" to="/blogs">Blogs</NavLink></li>
                 <li><NavLink className="sidenavs" to="/projects">Projects</NavLink></li>
-                <li><NavLink className="sidenavs" to="/">Contact</NavLink></li>
+                <li><NavLink className="sidenavs" to="/contact">Contact</NavLink></li>
                 
         </ul>
         
