@@ -405,8 +405,7 @@ footer i{
   /* border-top: 1px solid rgba(223, 223, 223, 0.521);
   border-left: 1px solid rgba(223, 223, 223, 0.521); */
   /* border: 2px solid #e7e7e7a6; */
-  background-color: rgba(245, 245, 245, 0.801);
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   
 }
 #about div {
@@ -429,8 +428,7 @@ footer i{
   margin-left: 20px;
   padding-bottom: 40px;
   transition: 0.3s;
-  background-color: whitesmoke;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 }
 
