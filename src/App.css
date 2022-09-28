@@ -552,6 +552,9 @@ footer i{
   #projects{
     padding: 10px;
   }
+  footer p{
+    font-size: 0.7rem;
+  }
   
 }
 
