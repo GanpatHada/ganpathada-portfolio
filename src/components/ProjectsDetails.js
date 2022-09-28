@@ -18,7 +18,7 @@ const Projects=[
         title:"Portfolio",
         mark:"Mark 4",
         desc:"It is my portfolio website",
-        live:"http://ganpathada-portfolio-sctp.vercel.app/",
+        live:"http://ganpathada.vercel.app/",
         source:"https://github.com/GanpatHada/ganpathada-portfolio"
     },
     {

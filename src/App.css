@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@500&family=El+Messiri&family=Josefin+Sans:wght@200;400&family=Lobster&family=Pacifico&family=Poppins:wght@300&family=Roboto&family=Sofia&family=Ubuntu:wght@300&family=Varela+Round&family=Zen+Loop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@500&family=El+Messiri&family=Josefin+Sans:wght@200;400&family=Lobster&family=Open+Sans&family=Pacifico&family=Poppins:wght@300&family=Roboto&family=Sofia&family=Ubuntu:wght@300&family=Varela+Round&family=Zen+Loop&display=swap');
 :root{
   --primarycolor:#ff4500;
 }
@@ -7,7 +7,9 @@
   margin: 0px;
   padding: 0px;
   font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: whitesmoke;
+  letter-spacing: 0.5px;
   
 
 }
@@ -103,7 +105,7 @@ nav a{
 #navs a{
   text-decoration: none;
   color: rgb(0, 0, 0);
-  transition: 0.3s ease-out background;
+  transition: 0.3s ease-out;
   display: flex;
   height: 45px;
   min-width: 50px;
@@ -195,6 +197,7 @@ main h2::first-letter{
   font-size: 1.1rem;
   color: #494949;
   margin: 20px 0px;
+  
 }
 .prevsblock h2{
   font-size: 2rem;
@@ -251,7 +254,7 @@ main h2::first-letter{
 
 #projectprev > .introsection,#contactprev > .introsection{
   align-items: flex-end;
-  text-align: justify;
+  text-align: right;
 }
 #projectprev img{
   transform: scalex(-1);
@@ -332,8 +335,6 @@ footer i{
 }
 #skillsprev{
  min-height: 300px;
- /* background: linear-gradient(to right,orangered,rgba(255, 68, 0, 0.856),orangered); */
- background-color:rgb(233, 233, 233);
  padding: 20px;
  padding-top: 0px;
  
@@ -343,16 +344,14 @@ footer i{
   text-align: center;
   padding: 20px 0px;
   font-size: 2rem;
-  color: rgb(0, 0, 0);
-  font-weight: lighter;
+  color: #232424;
   padding-bottom: 30px;
 
 }
 
 #skillsprev img{
-  height: 40px;
-  width: 40px;
-  margin:10px;
+  height: 44px;
+  margin:14px;
  
   
 }
