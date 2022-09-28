@@ -1,14 +1,6 @@
 import React from 'react'
-import image from './web logos/devimage.svg'
-import html from './web logos/html.png'
-import css from './web logos/css.png'
-import js from './web logos/js.png'
-import react from './web logos/react.webp'
-import github from './web logos/github.png'
-import java from './web logos/java.webp'
-import project from './web logos/projects.svg'
-import blogs from './web logos/blogs.svg'
-import contact from './web logos/contact.svg'
+import image from './web logos/developer.svg'
+
 import { Link } from 'react-router-dom'
 const Main = () => {
     return (
