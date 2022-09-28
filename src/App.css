@@ -13,8 +13,11 @@
   
 
 }
+body{
+  background-color: #0061b7;
+}
 #content{
-  min-height: calc(100vh - 240px);
+  min-height: calc(100vh - 223px);
 }
 .prevsblock{
   background-color: white;
