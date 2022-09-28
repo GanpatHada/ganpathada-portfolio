@@ -2,7 +2,7 @@ import React from 'react'
 const Blogs = () => {
     return (
         <div id='blogs' className='mainblocks'>
-            {/* <h1><span>B</span>logs</h1>
+            <h1><span>B</span>logs</h1>
             <div className="blogslist">
                 <div id="blog1" className='blogs'>
                     <h1>Angular vs React</h1>
@@ -14,7 +14,7 @@ const Blogs = () => {
                     <span>TypeScript is an object-oriented language designed by Microsoft in 2012. It is a superset of JavaScript and can be used both a language and a set of tools. It provides optional static typing, which can help to catch errors .</span>
                     <a href="https://ganpathada.hashnode.dev/need-of-typescript" target='_blank'> Read more...</a>
                 </div> 
-            </div> */}
+            </div>
 
         </div>
     )
