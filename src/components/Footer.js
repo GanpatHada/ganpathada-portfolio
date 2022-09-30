@@ -9,7 +9,7 @@ const Footer = () => {
         <a href="https://github.com/GanpatHada" target="_blank"><i className="fa-brands fa-github"></i></a>
         <a href="https://twitter.com/ganpat_hada" target="_blank"><i className="fa-brands fa-twitter"></i></a>
         <a href="mailto:hadaganpat42@gmail.com" target="_blank"><i className="fa-solid fa-envelope"></i></a>
-        <a href="/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+        <a href="https://www.instagram.com/ganpat_hada/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
         </div>
         <div>
             <p>© 2022 all rights reserved , Built with ❤ by Ganpat Hada</p>
