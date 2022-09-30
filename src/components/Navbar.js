@@ -2,19 +2,19 @@ import React, { useState } from 'react'
 import { NavLink, } from 'react-router-dom'
 import mainlogo from './web logos/mainlogo.png'
 const Navbar = () => {
-  
-  
+
+
   const [transform, settransform] = useState("-250px")
   const [display, setdisplay] = useState("none")
-  const closeSidebar=()=>{
+  const closeSidebar = () => {
     setdisplay("none");
     settransform("-250px");
   }
-  const sidenavs=document.querySelectorAll(".sidenavs");
-  sidenavs.forEach(e=>{
-    e.addEventListener("click",closeSidebar)
+  const sidenavs = document.querySelectorAll(".sidenavs");
+  sidenavs.forEach(e => {
+    e.addEventListener("click", closeSidebar)
   })
-  
+
   const checkActive = (match, location) => {
     if (!location) return false;
     const { pathname } = location;
@@ -24,40 +24,43 @@ const Navbar = () => {
 
   return (
     <nav>
-        <div id="title">
-            <a href="/"><img src={mainlogo} height="35px" alt="" /></a>
-        </div>
-        <div id="navs">
-            <ul>
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/blogs">Blogs</NavLink></li>
-                <li><NavLink to="/projects">Projects</NavLink></li>
-                <li><NavLink to="/contact">Contact</NavLink></li>
-                
-            </ul>
-        </div>
-        <aside style={{transform:`translateX(${transform})`}}>
-        <i className="fa-solid fa-xmark" id='cross' onClick={closeSidebar}></i> 
-
+      <div id="title">
+        <a href="/">Gh</a>
+      </div>
+      <div id="navs">
         <ul>
-                <li><NavLink className="sidenavs" to="/">Home</NavLink></li>
-                <li><NavLink className="sidenavs" to="/about">About</NavLink></li>
-                <li><NavLink className="sidenavs" to="/blogs">Blogs</NavLink></li>
-                <li><NavLink className="sidenavs" to="/projects">Projects</NavLink></li>
-                <li><NavLink className="sidenavs" to="/contact">Contact</NavLink></li>
-                
-        </ul>
-        
-        </aside> 
-        <div id="menu">
-        <i className="fa-solid fa-bars" onClick={()=>{
-          setdisplay("block");
-          settransform("0px");}}></i>
-        </div>
-        <div id="wrapper" style={{display}}>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/blogs">Blogs</NavLink></li>
+          <li><NavLink to="/projects">Projects</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
 
+        </ul>
+      </div>
+      <aside style={{ transform: `translateX(${transform})` }}>
+        <div id="asidenav">
+          <a href="/">Gh</a>
+          <i className="fa-solid fa-xmark" id='cross' onClick={closeSidebar}></i>
         </div>
+        <ul>
+          <li><NavLink className="sidenavs" to="/">Home</NavLink></li>
+          <li><NavLink className="sidenavs" to="/about">About</NavLink></li>
+          <li><NavLink className="sidenavs" to="/blogs">Blogs</NavLink></li>
+          <li><NavLink className="sidenavs" to="/projects">Projects</NavLink></li>
+          <li><NavLink className="sidenavs" to="/contact">Contact</NavLink></li>
+
+        </ul>
+
+      </aside>
+      <div id="menu">
+        <i className="fa-solid fa-bars" onClick={() => {
+          setdisplay("block");
+          settransform("0px");
+        }}></i>
+      </div>
+      <div id="wrapper" style={{ display }}>
+
+      </div>
     </nav>
   )
 }

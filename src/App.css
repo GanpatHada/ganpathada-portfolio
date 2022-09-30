@@ -13,7 +13,14 @@
   
 
 }
-
+#title a,#asidenav a{
+  color: transparent;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  background: linear-gradient(orangered,black);
+  background-clip: text;
+}
 #content{
   min-height: calc(100vh - 224px);
 }
@@ -40,7 +47,6 @@ nav{
   z-index: 5;
 }
 #cross{
-  margin-left: 220px;
   margin-top: 20px;
   color: white;
 }
@@ -69,12 +75,10 @@ a{
   text-decoration: none;
 }
 aside ul{
-  margin-top: 25px;
   display: flex;
   flex-direction: column;
-  margin-left: 0px;
-  padding-left: 0px;
-  width: 100%;
+  margin: 0px;
+  width: 250px;
   border-top: 1px solid rgba(255, 255, 255, 0.397);
   padding:40px 0px;
 }
@@ -84,7 +88,17 @@ aside ul li{
   padding-left: 40px;
   
 }
-
+#asidenav{
+  margin: 0px;
+  width: 220px;
+  margin: 0px auto;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+#asidenav a{
+  color:whitesmoke;
+}
 ul{
   margin: 0px;
   margin-right: 20px;
