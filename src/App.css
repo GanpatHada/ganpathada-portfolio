@@ -14,12 +14,17 @@
 
 }
 #title a,#asidenav a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: transparent;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: 'Lobster', cursive;
   background: linear-gradient(orangered,black);
   background-clip: text;
+  position: relative;
+  bottom: 4px;
 }
 #content{
   min-height: calc(100vh - 224px);
