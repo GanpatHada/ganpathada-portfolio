@@ -460,9 +460,7 @@ footer i{
 #blog1{
   margin-left: 0px;
 }
-#blog2{
-  
-}
+
 @media (min-width: 748px) and (max-width: 1000px){
   main h1{
     font-size: 4rem;

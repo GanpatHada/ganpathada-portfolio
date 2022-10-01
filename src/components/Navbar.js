@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { NavLink, } from 'react-router-dom'
-import mainlogo from './web logos/mainlogo.png'
+import { NavLink, useLocation, } from 'react-router-dom'
 const Navbar = () => {
 
-
+  const loc=useLocation();
+  const location=loc.pathname;
   const [transform, settransform] = useState("-250px")
   const [display, setdisplay] = useState("none")
   const closeSidebar = () => {
@@ -14,14 +14,6 @@ const Navbar = () => {
   sidenavs.forEach(e => {
     e.addEventListener("click", closeSidebar)
   })
-
-  const checkActive = (match, location) => {
-    if (!location) return false;
-    const { pathname } = location;
-    const { url } = match;
-    return pathname === url ? true : false;
-  };
-
   return (
     <nav>
       <div id="title">
@@ -29,11 +21,11 @@ const Navbar = () => {
       </div>
       <div id="navs">
         <ul>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/blogs">Blogs</NavLink></li>
-          <li><NavLink to="/projects">Projects</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
+          <li><NavLink style={{color:(location==='/'&&"orangered")}} to="/">Home</NavLink></li>
+          <li><NavLink style={{color:(location==='/about'&&"orangered")}}to="/about">About</NavLink></li>
+          <li><NavLink style={{color:(location==='/blogs'&&"orangered")}} to="/blogs">Blogs</NavLink></li>
+          <li><NavLink style={{color:(location==='/projects'&&"orangered")}} to="/projects">Projects</NavLink></li>
+          <li><NavLink style={{color:(location==='/contact'&&"orangered")}} to="/contact">Contact</NavLink></li>
 
         </ul>
       </div>
@@ -58,7 +50,7 @@ const Navbar = () => {
           settransform("0px");
         }}></i>
       </div>
-      <div id="wrapper" style={{ display }}>
+      <div id="wrapper" style={{ display }} onClick={closeSidebar}>
 
       </div>
     </nav>
