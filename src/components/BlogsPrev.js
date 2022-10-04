@@ -6,7 +6,7 @@ const BlogsPrev = () => {
     <div className='prevsblock' id='blogsprev'>
             <div className="introsection">
                 <h2>Blogs</h2>
-                <p>Here I have listed some of my technical blogs which I have written
+                <p>Here I have listed some of my technical blogs which I have written during my web developer journey
                 </p>
                 <Link to='/blogs'><button id='download_cv' className='primarybtn'>see Blogs</button></Link>
                 

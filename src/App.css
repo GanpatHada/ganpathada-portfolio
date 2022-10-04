@@ -6,8 +6,7 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto" sans-serif;
   color: whitesmoke;
   letter-spacing: 0.5px;
   
@@ -103,6 +102,7 @@ aside ul li{
 }
 #asidenav a{
   color:whitesmoke;
+  font-size: 2rem ;
 }
 ul{
   margin: 0px;
@@ -124,10 +124,11 @@ nav a{
   display: flex;
   align-items: center;
 }
+
 #navs a{
   text-decoration: none;
+  background-color: transparent;
   color: rgb(0, 0, 0);
-  transition: 0.3s ease-out;
   display: flex;
   height: 45px;
   min-width: 50px;
@@ -193,7 +194,7 @@ main h1{
   margin: 0px;
   color: #232424;
   margin-bottom: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  
   
 }
 main h1::first-letter{
@@ -208,9 +209,10 @@ main h2{
   
 }
 #mainblock h2{
-  font-family: Arial, Helvetica, sans-serif;
+  
   color: #3d3d3d;
   font-weight: normal;
+  line-height: 2rem;
 }
 main h2::first-letter{
   color: var(--primarycolor);
@@ -224,8 +226,7 @@ main h2::first-letter{
 .prevsblock h2{
   font-size: 2rem;
   color: rgb(37, 37, 37);
-  font-family: 'Ubuntu';
-  font-weight: bolder;
+  font-weight: 500;
 
 }
 
@@ -290,7 +291,9 @@ main h2::first-letter{
   color: #232424;
   text-align: center;
   margin: 20px 0px;
-  font-family: 'Ubuntu';
+  font-weight: 500;
+  
+  text-transform: uppercase;
 }
 .mainblocks h1 span{
   color: var(--primarycolor);
@@ -361,7 +364,8 @@ footer i{
   margin:0px;
   text-align: center;
   padding: 20px 0px;
-  font-size: 1.7rem;
+  font-weight: 500;
+  font-size: 2rem;
   color: #232424;
   padding-bottom: 30px;
 
@@ -391,13 +395,13 @@ footer i{
   
 }
 #cards h2,.blogs h1{
-  margin: 10px 0px;
+  margin: 20px 0px;
   color: #2c2c2c;
   font-size: 1.7rem;
   /* font-family: Arial, Helvetica, sans-serif;
   font-weight: normal; */
-  font-weight: bold;
-  font-family: 'El Messiri', sans-serif;
+  font-weight: 500;
+  line-height: 1.7rem;
 
 }
 #cards h4{
@@ -495,6 +499,9 @@ footer i{
     width: 100%;
     margin: 0px auto 20px auto;
   }
+  #blog1{
+    margin-top: 20px;
+  }
   #menu{
     display: block;
   }
@@ -510,6 +517,7 @@ footer i{
   }
   .prevsblock h2{
     font-size: 1.7rem;
+    line-height: 1.7rem;
   }
   #skillsprev img{
     height: 38px;
@@ -521,7 +529,8 @@ footer i{
   main .imagesection{
     display: flex;
     order: 1;
-    width: 100%;
+    width: 80%;
+    margin: auto;
   }
   main .introsection{
     order: 2;
@@ -529,6 +538,11 @@ footer i{
 
 }
 @media (max-width: 576px){
+  main .imagesection{
+    
+    width: 100%;
+   
+  }
   main h1{
     font-size: 2.8rem;
   }
@@ -560,6 +574,9 @@ footer i{
    
    min-height: 200px;   
   }
+  #skillsprev h2{
+    font-size: 1.7rem;
+  }
   #contactprev{
     min-height: 200px;
   }
@@ -571,6 +588,9 @@ footer i{
   }
   footer p{
     font-size: 0.7rem;
+  }
+  #mainblock h2{
+    line-height: 1.7rem;
   }
   
 }
