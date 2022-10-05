@@ -188,6 +188,7 @@ main {
 }
 .imagesection{
   padding: 30px;
+  overflow: hidden;
 }
 main h1{
   font-size: 5rem;
@@ -287,7 +288,7 @@ main h2::first-letter{
 .mainblocks{
   margin-top: 80px;
 }
-.mainblocks h1{
+.mainblocks > h1{
   color: #232424;
   text-align: center;
   margin: 20px 0px;
@@ -508,9 +509,9 @@ footer i{
   .prevsblock{
     flex-direction: column;
   }
-  .imagesection{
+  /* .imagesection{
     display: none;
-  }
+  } */
   .introsection{
     width: 100%;
     
@@ -526,22 +527,35 @@ footer i{
   main h1{
     font-size: 3.5rem;
   }
-  main .imagesection{
+  .prevsblock img,#mainblock img{
+    width:400px;
+  }
+  .imagesection{
     display: flex;
-    order: 1;
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
-  main .introsection{
+  main .imagesection,#blogsprev .imagesection{ 
+    order: 1;  
+  }
+  main .introsection,#blogsprev .introsection{
     order: 2;
   }
+  
 
 }
 @media (max-width: 576px){
-  main .imagesection{
-    
-    width: 100%;
-   
+  .prevsblock img{
+    width:200px;
+  }
+  #mainblock img{
+    width: 250px;
+  }
+  .imagesection{
+    padding: 10px;
+  }
+  #mainblock > div{
+    padding: 20px;
   }
   main h1{
     font-size: 2.8rem;
