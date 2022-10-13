@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Comfortaa:wght@500&family=El+Messiri&family=Josefin+Sans:wght@200;400&family=Lobster&family=Open+Sans&family=Pacifico&family=Poppins:wght@300&family=Roboto&family=Sofia&family=Ubuntu:wght@300&family=Varela+Round&family=Zen+Loop&display=swap');
 :root{
-  --primarycolor:#ff4500;
+  --primarycolor:orangered;
+  --secondarycolor:#0f0f0f;
+  --tertiarycolor:#1b1b1b;
+  --bg1:white;
+  --bg2:white;
+  --card:white;
+  --hover:#b1b0b03d;
+  
 }
 *{
   box-sizing: border-box;
@@ -12,6 +19,7 @@
   
 
 }
+
 #title a,#asidenav a{
   display: flex;
   align-items: center;
@@ -29,26 +37,31 @@
   min-height: calc(100vh - 224px);
 }
 .prevsblock{
-  background-color: white;
+  background-color: var(--bg2);
 }
 
 body::-webkit-scrollbar{
   display: none;
 }
+body{
+  background-color: var(--bg1);
+}
+html{
+  font-size: 1rem;
+}
+
 nav{
   display: flex;
+  background-color: var(--bg1);
   align-items: center;
   justify-content: space-between;
-  background-color: white;
   position: fixed;
   width: 100vw;
   top: 0px;
-  height: 50px;
-  padding: 5px;
-  padding-left: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
-  box-sizing: content-box;
+  
   z-index: 5;
+  padding: 5px 20px;
+  width: 100vw;
 }
 #cross{
   margin-top: 20px;
@@ -111,14 +124,27 @@ ul{
 nav *{
   display: flex;
 }
+#mode{
+  color: var(--secondarycolor);
+  margin-right: 0px;
+  position: fixed;
+  right: 20px;
+  top: 18px;
+}
 nav h1{
   font-size: 1.2rem;
   margin-left: 20px;
 }
 #navs{
   display: flex;
-  margin-right: 20px;
   align-items: center;
+  position: relative; 
+  width: 500px;
+  margin: 0px auto;
+}
+#navs li{
+  height: 45px;
+  width: 100px;
 }
 nav a{
   display: flex;
@@ -128,31 +154,63 @@ nav a{
 #navs a{
   text-decoration: none;
   background-color: transparent;
-  color: rgb(0, 0, 0);
+  color: var(--secondarycolor);
   display: flex;
   height: 45px;
-  min-width: 50px;
+  width: 100px;
   align-items: center;
   justify-content: center;
-  padding: 0px 20px;
-  border-radius: 25px; 
+  border-radius: 25px;
+  z-index: 3;
+  font-family: 'Poppins';
+} 
+
+#navback{
+  position: absolute;
+  top: 0px;
+  margin-left: 0px;
+  height: 100%;
+  width: 100px;
+  background-color: var(--hover);
+  z-index: 1;
+  transition: 0.1s;
+  border-radius: 5px;
+  display: none;
 }
-#navs a:hover{
-  background: linear-gradient(to right,rgb(255, 133, 88),rgb(255, 208, 196));
+#navs li:hover ~ #navback{
+  display: block;
+}
+#home:hover ~ #navback{
+  margin-left: 0px;
+}
+#about:hover ~ #navback{
+  margin-left: 100px;
+}
+#blogs:hover ~ #navback{
+  margin-left: 200px;
+}
+#projects:hover ~ #navback{
+  margin-left: 300px;
+}
+#contact:hover ~ #navback{
+  margin-left: 400px;
 }
 aside a{
   color: white;
   text-decoration: none;
 }
-#menu{
-  margin-right: 40px;
+
+#menuicon{
   display: none;
-  position: relative;
-  top: 10px;
+  color: var(--secondarycolor);
+  position: fixed;
+  top: 18px;
+  left: 50vw;
 }
+
 nav i{
   font-size: 1.5rem;
-  color: #232424;
+  display: inline-block;
 }
 nav div{
   height: 100%;
@@ -162,7 +220,9 @@ main {
   margin-top: 60px;
   background-color: white;
 }
-
+main .introsection{
+  padding-left: 50px;
+}
 .prevsblock{
   display: flex;
   padding: 20px;
@@ -190,43 +250,52 @@ main {
   padding: 30px;
   overflow: hidden;
 }
+main .introsection p{
+  font-size: 1.3rem;
+  color: rgb(131, 131, 131);
+  font-weight: 400;
+  font-family: 'Poppins';
+}
 main h1{
   font-size: 5rem;
+  line-height: 5rem;
   margin: 0px;
-  color: #232424;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   
-  
+}
+main h1,#mainblock h2{
+  color: transparent;
+  background: linear-gradient(to right,var(--secondarycolor),var(--tertiarycolor));
+  background-clip: text; 
 }
 main h1::first-letter{
   color: var(--primarycolor);
 }
-main h2{
-  font-size: 2.5rem;
-  margin: 0px;
-  line-height: 2.5rem;
-  color: #3d3d3dc4;
-  font-weight: 500;
-  
+#mainblock{
+  min-height: calc(100vh - 50px);
 }
 #mainblock h2{
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 700; 
   
-  color: #3d3d3d;
-  font-weight: normal;
-  line-height: 2rem;
+}
+
+#mainblock .primarybtn{
+  margin-top: 1rem;
 }
 main h2::first-letter{
   color: var(--primarycolor);
 }
 .prevsblock p{
   font-size: 1.1rem;
-  color: #494949;
+  color: var(--tertiarycolor);
   margin: 20px 0px;
   
 }
 .prevsblock h2{
   font-size: 2rem;
-  color: rgb(37, 37, 37);
+  color: var(--secondarycolor);
   font-weight: 500;
 
 }
@@ -247,11 +316,13 @@ main h2::first-letter{
   border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;  
   cursor: pointer;
-  transition: 0.2s ease-in;
   text-transform: capitalize;
+  
 }
 .primarybtn:hover{
-  background-color: rgb(255, 51, 0);
+  background-color:transparent;
+  color: var(--secondarycolor);
+  border: 2px solid var(--primarycolor);
 }
 .secondarybtn{
   background-color:rgba(255, 68, 0, 0.185);
@@ -289,10 +360,11 @@ main h2::first-letter{
   margin-top: 80px;
 }
 .mainblocks > h1{
-  color: #232424;
+  color: var(--tertiarycolor);
   text-align: center;
   margin: 20px 0px;
   font-weight: 500;
+  letter-spacing: normal;
   
   text-transform: uppercase;
 }
@@ -300,9 +372,11 @@ main h2::first-letter{
   color: var(--primarycolor);
 }
 .mainblocks{
+  background-color: var(--bg2);
   margin-top: 60px;
   padding: 20px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
+  min-height: calc(100vh - 149px);
   
   
 }
@@ -317,10 +391,12 @@ main h2::first-letter{
   font-size: 1.2rem;
   background-color: #0061b7;
   border: none;
+  transition: 0.2s;
 
 }
 #contactprev .primarybtn:hover{
   background-color: #00437e;
+  color: white;
  
 }
 footer{
@@ -356,10 +432,8 @@ footer i{
   
 }
 #skillsprev{
- min-height: 300px;
- padding: 20px;
- padding-top: 0px;
- 
+  background-color: var(--bg2);
+  padding-bottom: 40px;
 }
 #skillsprev h2{
   margin:0px;
@@ -367,7 +441,7 @@ footer i{
   padding: 20px 0px;
   font-weight: 500;
   font-size: 2rem;
-  color: #232424;
+  color: var(--secondarycolor);
   padding-bottom: 30px;
 
 }
@@ -397,7 +471,7 @@ footer i{
 }
 #cards h2,.blogs h1{
   margin: 20px 0px;
-  color: #2c2c2c;
+  color: var(--secondarycolor);
   font-size: 1.7rem;
   /* font-family: Arial, Helvetica, sans-serif;
   font-weight: normal; */
@@ -407,15 +481,16 @@ footer i{
 }
 #cards h4{
   margin: 10px 0px;
-  color: #3d3d3dc4;
-  font-size: 1.2rem;
+  color: var(--secondarycolor);
+  font-size: 1rem;
+  font-weight: 500;
 }
 #cards p,.blogs span,#about p{
   margin: 10px 0px;
   margin-bottom: 20px;
-  color: #6d6d6d;
+  color: var(--tertiarycolor);
 }
-#cards > div{
+#cards > a,.blogs{
   
   width: 400px;
   border-radius: 3px;
@@ -425,12 +500,14 @@ footer i{
   justify-content: center;
   margin: 10px;
   padding-bottom: 40px;
-  border: 1px solid rgba(128, 128, 128, 0.267);
-  transition: 0.3s;
-   
+  transition: 0.2s ease-out box-shadow;
+  cursor: pointer;
+  background-color: var(--card); 
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-#cards > div:hover{
-  box-shadow: rgba(104, 104, 104, 0.12) 0px 2px 4px 0px, rgba(107, 107, 107, 0.32) 0px 2px 16px 0px;
+#cards > a:hover,.blogs:hover{
+  /* box-shadow: rgba(233, 233, 233, 0.884) 2px 2px 8px 2px, rgba(233, 233, 233, 0.884) -2px -2px 8px 2px; */
+  box-shadow: rgba(185, 185, 185, 0.432) 3px 3px 10px 2px,rgba(185, 185, 185, 0.432) -3px -3px 10px 2px;
   border: none;
 }
 #about div {
@@ -443,17 +520,7 @@ footer i{
   justify-content: center;
 }
 
-.blogs{
-  width: 400px;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0px;
-  margin-left: 20px;
-  padding-bottom: 40px;
-  transition: 0.3s;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 
-}
 
 .blogs a{
   color: var(--primarycolor);
@@ -471,11 +538,20 @@ footer i{
 @media (min-width: 748px) and (max-width: 1000px){
   main h1{
     font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 15px;
+    
   }
-  main h2{
-    font-size: 2rem;
-    line-height: 2rem;
+  #mainblock h2{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    
   }
+  #mainblock p{
+    font-size: 1.2rem;
+    margin: 15px 0px;
+  }
+  
   .prevsblock p{
     font-size: 1rem;
   }
@@ -495,6 +571,7 @@ footer i{
   #navs{
     display: none;
   }
+  
   .blogslist{
     flex-direction: column;
   }
@@ -505,8 +582,9 @@ footer i{
   #blog1{
     margin-top: 20px;
   }
-  #menu{
+  #menuicon{
     display: block;
+    
   }
   .prevsblock{
     flex-direction: column;
@@ -526,9 +604,7 @@ footer i{
     height: 38px;
     width: 38px;
   }
-  main h1{
-    font-size: 3.5rem;
-  }
+  
   .prevsblock img,#mainblock img{
     width:400px;
   }
@@ -547,6 +623,19 @@ footer i{
 
 }
 @media (max-width: 576px){
+  main h1{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 500;
+  }
+  #mainblock h2{
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+  #mainblock p{
+    font-size: 1rem;
+  }
   .prevsblock img{
     width:200px;
   }
@@ -556,16 +645,14 @@ footer i{
   .imagesection{
     padding: 10px;
   }
-  #mainblock > div{
+  #mainblock > .imagesection{
     padding: 20px;
   }
-  main h1{
-    font-size: 2.8rem;
+  #mainblock > .introsection{
+    padding: 10px;
+    padding-top: 30px;
   }
-  main h2{
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-  }
+  
   .prevsblock p{
     font-size: 1rem;
   }
@@ -605,9 +692,7 @@ footer i{
   footer p{
     font-size: 0.7rem;
   }
-  #mainblock h2{
-    line-height: 1.7rem;
-  }
+  
   
 }
 

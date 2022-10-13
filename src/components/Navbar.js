@@ -1,33 +1,60 @@
 import React, { useState } from 'react'
 import { NavLink, useLocation, } from 'react-router-dom'
 const Navbar = () => {
-
-  const loc=useLocation();
-  const location=loc.pathname;
+  const [mode, setmode] = useState("light");
+  const loc = useLocation();
+  const location = loc.pathname;
   const [transform, settransform] = useState("-250px")
   const [display, setdisplay] = useState("none")
   const closeSidebar = () => {
     setdisplay("none");
     settransform("-250px");
   }
+  const changemode = () => {
+    if (mode === 'dark')
+      setmode("light");
+    else
+      setmode('dark');
+    if (mode === 'light') {
+      document.documentElement.style.setProperty('--bg1', '#0f0f0f');
+      document.documentElement.style.setProperty('--secondarycolor', 'whitesmoke');
+      document.documentElement.style.setProperty('--tertiarycolor', 'lightgrey');
+      document.documentElement.style.setProperty('--bg2', '#0c0c0c');
+      document.documentElement.style.setProperty('--card', '#121212d1');
+    }
+    else {
+
+      document.documentElement.style.setProperty('--bg1', 'white');
+      document.documentElement.style.setProperty('--secondarycolor', 'black');
+      document.documentElement.style.setProperty('--tertiarycolor', '#1b1b1b');
+      document.documentElement.style.setProperty('--bg2', 'white');
+      document.documentElement.style.setProperty('--card', 'white');
+    }
+  }
   const sidenavs = document.querySelectorAll(".sidenavs");
   sidenavs.forEach(e => {
     e.addEventListener("click", closeSidebar)
   })
   return (
-    <nav>
+    <nav style={{ boxShadow: (mode === 'light' ? 'rgba(0, 0, 0, 0.1) 0px 4px 12px' : 'none') }}>
       <div id="title">
         <a href="/">Gh</a>
       </div>
       <div id="navs">
         <ul>
-          <li><NavLink style={{color:(location==='/'&&"orangered")}} to="/">Home</NavLink></li>
-          <li><NavLink style={{color:(location==='/about'&&"orangered")}}to="/about">About</NavLink></li>
-          <li><NavLink style={{color:(location==='/blogs'&&"orangered")}} to="/blogs">Blogs</NavLink></li>
-          <li><NavLink style={{color:(location==='/projects'&&"orangered")}} to="/projects">Projects</NavLink></li>
-          <li><NavLink style={{color:(location==='/contact'&&"orangered")}} to="/contact">Contact</NavLink></li>
+          <li id='home'><NavLink style={{ color: (location === '/' && "orangered") }} to="/">Home</NavLink></li>
+          <li id='about'><NavLink style={{ color: (location === '/about' && "orangered") }} to="/about">About</NavLink></li>
+          <li id='blogs'><NavLink style={{ color: (location === '/blogs' && "orangered") }} to="/blogs">Blogs</NavLink></li>
+          <li id='projects'><NavLink style={{ color: (location === '/projects' && "orangered") }} to="/projects">Projects</NavLink></li>
+          <li id='contact'><NavLink style={{ color: (location === '/contact' && "orangered") }} to="/contact">Contact</NavLink></li>
+          <div id="navback"></div>
+
 
         </ul>
+
+      </div>
+      <div>
+        <i title={`${mode} mode enabled`} className={(mode === 'dark') ? 'fa-solid fa-sun' : 'fa-sharp fa-solid fa-moon'} onClick={changemode} id='mode'></i>
       </div>
       <aside style={{ transform: `translateX(${transform})` }}>
         <div id="asidenav">
@@ -45,7 +72,7 @@ const Navbar = () => {
 
       </aside>
       <div id="menu">
-        <i className="fa-solid fa-bars" onClick={() => {
+        <i id='menuicon' className="fa-solid fa-bars" onClick={() => {
           setdisplay("block");
           settransform("0px");
         }}></i>
