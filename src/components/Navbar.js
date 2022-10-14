@@ -30,7 +30,7 @@ const Navbar = () => {
     else {
 
       document.documentElement.style.setProperty('--bg1', 'white');
-      document.documentElement.style.setProperty('--bg2', 'whitesmoke');
+      document.documentElement.style.setProperty('--bg2', '#ededed');
       document.documentElement.style.setProperty('--secondarycolor', 'black');
       document.documentElement.style.setProperty('--tertiarycolor', '#1b1b1b');
       document.documentElement.style.setProperty('--card', 'white');
