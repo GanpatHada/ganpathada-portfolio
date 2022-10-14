@@ -209,7 +209,7 @@ aside a{
   color: var(--secondarycolor);
   position: fixed;
   top: 18px;
-  left: calc(50vw - 5px);
+  left: calc(50vw - 10px);
 }
 
 nav i{
@@ -590,9 +590,7 @@ footer i{
   .blogslist{
     flex-direction: column;
   }
-  #skillsprev{
-    padding: 0px;
-  }
+  
   .blogs{
     width: 100%;
     margin: 0px auto 20px auto;
@@ -627,7 +625,7 @@ footer i{
   
   }
   #skillsprev{
-    padding-bottom: 20px;
+    padding :20px 0px;
   }
   .wrapperimage{
     height: 60px;
@@ -699,8 +697,7 @@ footer i{
   #projectprev,#blogsprev{
     min-height: 100px;
   }
-  #skillsprev{
-   
+  #skillsprev{ 
    min-height: 200px;   
   }
   #skillsprev h2{
