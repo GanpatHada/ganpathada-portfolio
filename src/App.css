@@ -4,9 +4,13 @@
   --secondarycolor:#0f0f0f;
   --tertiarycolor:#1b1b1b;
   --bg1:white;
-  --bg2:white;
+  --bg2:whitesmoke;
   --card:white;
   --hover:#b1b0b03d;
+  --navbg:white;
+  --footerside:orangered;
+  --btn2:rgba(255, 68, 0, 0.185);
+  --shadow:rgba(185, 185, 185, 0.432);
   
 }
 *{
@@ -37,7 +41,7 @@
   min-height: calc(100vh - 224px);
 }
 .prevsblock{
-  background-color: var(--bg2);
+  background-color: var(--bg1);
 }
 
 body::-webkit-scrollbar{
@@ -52,13 +56,12 @@ html{
 
 nav{
   display: flex;
-  background-color: var(--bg1);
+  background-color: var(--navbg);
   align-items: center;
   justify-content: space-between;
   position: fixed;
   width: 100vw;
   top: 0px;
-  
   z-index: 5;
   padding: 5px 20px;
   width: 100vw;
@@ -83,7 +86,7 @@ aside{
   z-index: 4;
   height: 100vh;
   width: 250px;
-  background-color:var(--primarycolor);
+  background-color:var(--footerside);
   transition: 0.3s ease-out;
   flex-direction: column;
   
@@ -96,7 +99,7 @@ aside ul{
   flex-direction: column;
   margin: 0px;
   width: 250px;
-  border-top: 1px solid rgba(255, 255, 255, 0.397);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding:40px 0px;
 }
 aside ul li{
@@ -162,7 +165,7 @@ nav a{
   justify-content: center;
   border-radius: 25px;
   z-index: 3;
-  font-family: 'Poppins';
+  
 } 
 
 #navback{
@@ -211,6 +214,7 @@ aside a{
 nav i{
   font-size: 1.5rem;
   display: inline-block;
+  cursor:pointer;
 }
 nav div{
   height: 100%;
@@ -325,13 +329,13 @@ main h2::first-letter{
   border: 2px solid var(--primarycolor);
 }
 .secondarybtn{
-  background-color:rgba(255, 68, 0, 0.185);
+  background-color:var(--btn2);
   border: 1px solid var(--primarycolor);
   border: none;
   color: var(--primarycolor);
   height: 45px;
   width: 130px;
-  border-radius: 7px; 
+  border-radius: 5px; 
   font-weight: bold;
   cursor: pointer;
   text-transform: capitalize;
@@ -372,7 +376,8 @@ main h2::first-letter{
   color: var(--primarycolor);
 }
 .mainblocks{
-  background-color: var(--bg2);
+  
+  background-color:var(--bg2);
   margin-top: 60px;
   padding: 20px;
   padding-bottom: 40px;
@@ -400,16 +405,13 @@ main h2::first-letter{
  
 }
 footer{
-  background-color: var(--primarycolor);
+  background-color: var(--footerside);
 }footer p{
+  
   margin-top: 10px;
   padding: 15px;
-  background-color: rgb(224, 60, 0);
   font-size: 0.9rem;
   font-family: Arial, Helvetica, sans-serif;
-  
-  
- 
 }
 footer h3{
   margin: 0px;
@@ -499,29 +501,35 @@ footer i{
   flex-direction: column;
   justify-content: center;
   margin: 10px;
+  transition: 0.2s ease-in-out box-shadow;
   padding-bottom: 40px;
-  transition: 0.2s ease-out box-shadow;
   cursor: pointer;
   background-color: var(--card); 
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  
 }
 #cards > a:hover,.blogs:hover{
-  /* box-shadow: rgba(233, 233, 233, 0.884) 2px 2px 8px 2px, rgba(233, 233, 233, 0.884) -2px -2px 8px 2px; */
-  box-shadow: rgba(185, 185, 185, 0.432) 3px 3px 10px 2px,rgba(185, 185, 185, 0.432) -3px -3px 10px 2px;
-  border: none;
+  
+  box-shadow:  var(--shadow) 3px 3px 10px 2px,var(--shadow) -3px -3px 10px 2px;
+  
+  
 }
-#about div {
+#About div {
   padding: 15px;
   text-align: justify;
+  
+}
+#About div p{
+  color:var(--tertiarycolor);
 }
 .blogslist{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-
-
+#About {
+  background-color:var(--bg1);
+ 
+}
 .blogs a{
   color: var(--primarycolor);
 }

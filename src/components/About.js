@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div id="about" className='mainblocks'>
+    <div id="About" className='mainblocks'>
       <h1><span>M</span>e and <span>M</span>yself</h1>
       <div>
         <p>Hi, I am Ganpat Hada a Full stack  Developer and designer. I have been working on the MERN stack for about 4 months in this span I have developed multiple projects which helped me to enhance my skills.I am currently working on Typescript and figma <br /><br />

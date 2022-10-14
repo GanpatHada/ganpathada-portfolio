@@ -16,19 +16,28 @@ const Navbar = () => {
     else
       setmode('dark');
     if (mode === 'light') {
-      document.documentElement.style.setProperty('--bg1', '#0f0f0f');
+      document.documentElement.style.setProperty('--bg1', '#181818');
+      document.documentElement.style.setProperty('--bg2', '#181818');
       document.documentElement.style.setProperty('--secondarycolor', 'whitesmoke');
       document.documentElement.style.setProperty('--tertiarycolor', 'lightgrey');
-      document.documentElement.style.setProperty('--bg2', '#0c0c0c');
-      document.documentElement.style.setProperty('--card', '#121212d1');
+      document.documentElement.style.setProperty('--card', '#7c7c7c0d');
+      document.documentElement.style.setProperty('--footerside', '#141414');
+      document.documentElement.style.setProperty('--navbg', '#141414');
+      document.documentElement.style.setProperty('--btn2', '#bfbfbf1a');
+      document.documentElement.style.setProperty('--shadow', '#141414');
+
     }
     else {
 
       document.documentElement.style.setProperty('--bg1', 'white');
+      document.documentElement.style.setProperty('--bg2', 'whitesmoke');
       document.documentElement.style.setProperty('--secondarycolor', 'black');
       document.documentElement.style.setProperty('--tertiarycolor', '#1b1b1b');
-      document.documentElement.style.setProperty('--bg2', 'white');
       document.documentElement.style.setProperty('--card', 'white');
+      document.documentElement.style.setProperty('--navbg', 'white');
+      document.documentElement.style.setProperty('--footerside', 'orangered');
+      document.documentElement.style.setProperty('--btn2', 'rgba(255, 68, 0, 0.185)');
+      document.documentElement.style.setProperty('--shadow', 'rgba(185, 185, 185, 0.432)');
     }
   }
   const sidenavs = document.querySelectorAll(".sidenavs");
