@@ -22,7 +22,7 @@ const Navbar = () => {
       document.documentElement.style.setProperty('--tertiarycolor', 'lightgrey');
       document.documentElement.style.setProperty('--card', '#7c7c7c0d');
       document.documentElement.style.setProperty('--footerside', '#141414');
-      document.documentElement.style.setProperty('--navbg', '#141414');
+      document.documentElement.style.setProperty('--navbg', 'black');
       document.documentElement.style.setProperty('--btn2', '#bfbfbf1a');
       document.documentElement.style.setProperty('--shadow', '#141414');
 
