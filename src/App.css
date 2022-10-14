@@ -278,7 +278,8 @@ main h1::first-letter{
 #mainblock h2{
   font-size: 3.4rem;
   line-height: 3.4rem;
-  font-weight:bold; 
+  font-weight:bold;
+  margin: 8px 0px; 
   
 }
 
@@ -589,6 +590,9 @@ footer i{
   .blogslist{
     flex-direction: column;
   }
+  #skillsprev{
+    padding: 0px;
+  }
   .blogs{
     width: 100%;
     margin: 0px auto 20px auto;
@@ -657,6 +661,7 @@ footer i{
   #mainblock h2{
     font-size: 2rem;
     line-height: 2rem;
+    margin: 5px 0px;
     
   }
   #mainblock p{
