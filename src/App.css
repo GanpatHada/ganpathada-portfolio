@@ -285,8 +285,8 @@ main h1::first-letter{
   
 }
 
-#mainblock .primarybtn{
-  margin-top: 1rem;
+.prevsblock .primarybtn{
+  margin-top: 20px;
 }
 main h2::first-letter{
   color: var(--primarycolor);
@@ -397,6 +397,7 @@ main h2::first-letter{
   background-color: #0061b7;
   border: none;
   transition: 0.2s;
+  margin-top: 0px;
 
 }
 #contactprev .primarybtn:hover{
