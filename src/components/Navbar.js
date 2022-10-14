@@ -25,6 +25,8 @@ const Navbar = () => {
       document.documentElement.style.setProperty('--navbg', '#0e0e0e');
       document.documentElement.style.setProperty('--btn2', '#bfbfbf1a');
       document.documentElement.style.setProperty('--shadow', '#141414');
+      document.documentElement.style.setProperty('--bg3', '#161616fa');
+      
 
     }
     else {
@@ -38,6 +40,7 @@ const Navbar = () => {
       document.documentElement.style.setProperty('--footerside', 'orangered');
       document.documentElement.style.setProperty('--btn2', 'rgba(255, 68, 0, 0.185)');
       document.documentElement.style.setProperty('--shadow', 'rgba(185, 185, 185, 0.432)');
+      document.documentElement.style.setProperty('--bg3', '#f2f4f5');
     }
   }
   const sidenavs = document.querySelectorAll(".sidenavs");

@@ -6,9 +6,9 @@ const Main = () => {
     return (
             <main className='prevsblock' id='mainblock'>
                 <div className="introsection">
-                    <h1>Hi there!</h1>
-                    <h2>I'am Ganpat Hada a web developer</h2>
-                    <p>Final year BCA Hons. student at DAVV Indore</p>
+                    <h2>Hi there !</h2>
+                    <h2>I'am Ganpat Hada a <span>web developer</span></h2>
+                    <p>Final year BCA Hons. student at DAVV Indore,currently exploring Typescript and figma</p>
                     <Link to="/about"><button className='primarybtn'>Know more</button></Link>
                 </div>
                 <div className='imagesection'>

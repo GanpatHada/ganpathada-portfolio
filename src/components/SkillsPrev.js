@@ -13,8 +13,9 @@ import exp from './web logos/express.png'
 import github from './web logos/github.png'
 const SkillsPrev = () => {
     return (
-        <div id="skillsprev">
-            <h2>Skills</h2>
+        <div id="skillsprev" className="prevsblock">
+              
+            <h2>Skills & <span>Technologies</span></h2>
             <div>
                 <div className="wrapperimage">
                       <img src={react} alt="" />
