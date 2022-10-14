@@ -665,6 +665,10 @@ footer i{
     font-weight: 500;
     
   }
+  main .introsection{
+    align-items: center;
+    text-align: center;
+  }
   #mainblock h2{
     font-size: 2rem;
     line-height: 2rem;
