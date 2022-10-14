@@ -15,19 +15,43 @@ const SkillsPrev = () => {
     return (
         <div id="skillsprev">
             <h2>Skills</h2>
-            <div><img src={react} alt="" />
-                <img src={html} alt="" />
-                <img src={css} alt="" />
-                <img src={js} alt="" />
-                <img src={figma} alt="" />
-                <img src={bootstrap} alt="" />
-                <img src={node1} alt="" />
-                <img  src={ts} alt="" />
-                <img  src={fire} alt="" />
-                <img  src={mdb} alt="" />
-                <img  src={exp} alt="" />
-                <img  src={github} alt="" />
-                
+            <div>
+                <div className="wrapperimage">
+                      <img src={react} alt="" />
+                </div>
+                <div className="wrapperimage">
+                      <img src={html} alt="" />
+                </div>
+                <div className="wrapperimage">
+                      <img src={css} alt="" />
+                </div>
+                <div className="wrapperimage">
+                      <img src={js} alt="" />
+                </div>
+                <div className="wrapperimage">
+                      <img src={figma} alt="" />
+                </div>
+                <div className="wrapperimage">
+                      <img src={bootstrap} alt="" />
+                </div>
+                <div className="wrapperimage">
+                      <img src={node1} alt="" />
+                </div>
+                <div className="wrapperimage">
+                      <img src={ts} alt="" />
+                </div>   
+                <div className="wrapperimage">
+                      <img src={mdb} alt="" />
+                </div>   
+                <div className="wrapperimage">
+                      <img src={exp} alt="" />
+                </div>   
+                <div className="wrapperimage">
+                      <img src={fire} alt="" />
+                </div>   
+                <div className="wrapperimage">
+                      <img src={github} alt="" />
+                </div>   
             </div>
             
 

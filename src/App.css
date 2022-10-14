@@ -2,7 +2,7 @@
 :root{
   --primarycolor:orangered;
   --secondarycolor:#0f0f0f;
-  --tertiarycolor:#1b1b1b;
+  --tertiarycolor:#4e4d4d;
   --bg1:white;
   --bg2:#ededed;
   --card:white;
@@ -147,7 +147,7 @@ nav h1{
 }
 #navs li{
   height: 45px;
-  width: 100px;
+  width: 90px;
 }
 nav a{
   display: flex;
@@ -160,7 +160,7 @@ nav a{
   color: var(--secondarycolor);
   display: flex;
   height: 45px;
-  width: 100px;
+  width: 90px;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
@@ -173,7 +173,7 @@ nav a{
   top: 0px;
   margin-left: 0px;
   height: 100%;
-  width: 100px;
+  width: 90px;
   background-color: var(--hover);
   z-index: 1;
   transition: 0.1s;
@@ -187,16 +187,16 @@ nav a{
   margin-left: 0px;
 }
 #about:hover ~ #navback{
-  margin-left: 100px;
+  margin-left: 90px;
 }
 #blogs:hover ~ #navback{
-  margin-left: 200px;
+  margin-left: 180px;
 }
 #projects:hover ~ #navback{
-  margin-left: 300px;
+  margin-left: 270px;
 }
 #contact:hover ~ #navback{
-  margin-left: 400px;
+  margin-left: 360px;
 }
 aside a{
   color: white;
@@ -221,8 +221,7 @@ nav div{
 }
 
 main {
-  margin-top: 60px;
-  background-color: white;
+  margin-top: 50px;
 }
 main .introsection{
   padding-left: 50px;
@@ -255,16 +254,17 @@ main .introsection{
   overflow: hidden;
 }
 main .introsection p{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: rgb(131, 131, 131);
   font-weight: 400;
   font-family: 'Poppins';
 }
 main h1{
-  font-size: 5rem;
-  line-height: 5rem;
+  font-size: 4.5rem;
+  line-height: 4.5rem;
   margin: 0px;
   margin-bottom: 20px;
+ 
   
 }
 main h1,#mainblock h2{
@@ -279,8 +279,8 @@ main h1::first-letter{
   min-height: calc(100vh - 50px);
 }
 #mainblock h2{
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
   font-weight: 700; 
   
 }
@@ -434,7 +434,7 @@ footer i{
   
 }
 #skillsprev{
-  background-color: var(--bg2);
+  background-color: var(--bg1);
   padding-bottom: 40px;
 }
 #skillsprev h2{
@@ -454,11 +454,24 @@ footer i{
  
   
 }
-#skillsprev div{
-  text-align: center;
-  max-width: 450px;
+#skillsprev > div{
+  display: flex;
   margin: auto;
+  width: 600px;
+  flex-wrap: wrap;
 
+}
+.wrapperimage{
+  background-color: var(--card);
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  box-shadow: 0 0 5px 2px rgb(0 0 0 / 20%);
+  
+  
 }
 #projects h1::first-letter{
   color: var(--primarycolor);
@@ -568,8 +581,8 @@ footer i{
     min-height: 250px;
   }
   #skillsprev img{
-    height: 40px;
-    width: 40px;
+    height: 38px;
+    width: 38px;
   }
  
 
@@ -607,6 +620,21 @@ footer i{
   .prevsblock h2{
     font-size: 1.7rem;
     line-height: 1.7rem;
+  }
+  #skillsprev > div{
+    display: flex;
+    margin: auto;
+    width: 95vw;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+  }
+  #skillsprev{
+    padding-bottom: 20px;
+  }
+  .wrapperimage{
+    height: 60px;
+    width: 60px;
   }
   #skillsprev img{
     height: 38px;
@@ -667,12 +695,7 @@ footer i{
   .introsection{
     padding: 10px;
   }
-  
-  #skillsprev img{
-    height: 40px;
-    width: 40px;
-    margin: 10px;
-  }
+ 
   #skillsprev div{
     padding-top: 0px;
     
