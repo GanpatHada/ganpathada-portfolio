@@ -22,9 +22,9 @@ function App() {
   return (
     <div>
       <Main />
+      <SkillsPrev />
       <ProjectsPrev />
       <BlogsPrev />
-      <SkillsPrev />
       <ContactPrev scroll={scrolltoref} />
     </div>
 
