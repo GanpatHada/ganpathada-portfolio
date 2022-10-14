@@ -666,6 +666,11 @@ footer i{
     font-weight: 500;
     
   }
+  #mainblock .primarybtn{
+    width: 83vw;
+    margin-top: 0px;
+    border-radius: 0px;
+  }
   main .introsection{
     align-items: center;
     text-align: center;
