@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, useLocation, } from 'react-router-dom'
+import { BsSun } from "react-icons/bs";
+import { BsMoon } from "react-icons/bs";
 const Navbar = () => {
   const [mode, setmode] = useState("light");
   const loc = useLocation();
@@ -65,8 +67,14 @@ const Navbar = () => {
         </ul>
 
       </div>
-      <div>
-        <i title={`${mode} mode enabled`} className={(mode === 'dark') ? 'fa-solid fa-sun' : 'fa-sharp fa-solid fa-moon'} onClick={changemode} id='mode'></i>
+      <div onClick={changemode} id='mode' style={{cursor:'pointer'}} title={`${mode} mode enabled`}>
+        {
+          (mode==='dark')&&<BsSun style={{color:'white',fontSize:"22px"}}/>
+        }
+        {
+          (mode==='light')&&<BsMoon style={{filter:'invert()',fontSize:"22px"}}/>
+        }
+        {/* <i title={`${mode} mode enabled`} className={(mode === 'dark') ? 'fa-solid fa-sun' : 'fa-sharp fa-solid fa-moon'} onClick={changemode} id='mode'></i> */}
       </div>
       <aside style={{ transform: `translateX(${transform})` }}>
         <div id="asidenav">

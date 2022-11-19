@@ -217,9 +217,6 @@ nav i{
   display: inline-block;
   cursor:pointer;
 }
-nav div{
-  height: 100%;
-}
 
 main {
   margin-top: 50px;
